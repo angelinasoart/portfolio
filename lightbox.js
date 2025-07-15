@@ -6,7 +6,7 @@ const btnNext= document.getElementById('lb-next');
 const btnClose= document.getElementById('lb-close');
 let current = 0;
 
-// open on click
+
 thumbs.forEach((img, idx) => {
   img.addEventListener('click', () => show(idx));
 });
@@ -28,7 +28,6 @@ btnPrev.onclick = () => navigate(-1);
 btnNext.onclick = () => navigate(+1);
 btnClose.onclick= () => lightbox.classList.add('hide');
 
-// ESC key closes; ← / → keys navigate
 document.addEventListener('keydown', e => {
   if (lightbox.classList.contains('hide')) return;
   if (e.key === 'Escape') lightbox.classList.add('hide');
